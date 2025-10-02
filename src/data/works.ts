@@ -7,11 +7,9 @@ export const works = [
     year: '2025',
     dateRange: 'Jul 2025 - Present',
     tags: ['Mentorship', 'Product Management', 'Startup Incubator'],
-    link: '#',
-    description: [
-      'We\'re shaping the next generation of builders! Lavalab is USC\'s premier startup incubator, and as the Director of PM, I build curriculum to make our PMs the best that they can be. Learning how to work better with designers and engineers through wireframing and vibecoding, conducting hundreds of user interviews and discovery across tons of industries, and pitching our idea to investors and VCs is a small part of what I do to help the community thrive.',
-      'https://usclavalab.org/'
-    ],
+    link: 'https://usclavalab.org/',
+    linkText: 'Check the Website!',
+    description: 'We\'re shaping the next generation of builders! Lavalab is USC\'s premier startup incubator, and as the Director of PM, I build curriculum to make our PMs the best that they can be. Learning how to work better with designers and engineers through wireframing and vibecoding, conducting hundreds of user interviews and discovery across tons of industries, and pitching our idea to investors and VCs is a small part of what I do to help the community thrive.',
     image: '/logos/lavalab-photo.png',
     logo: '/logos/lavalab.svg',
   },

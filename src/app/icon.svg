@@ -1,0 +1,22 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hand-drawn style circle for face -->
+  <path d="M16 2C23.732 2 30 8.268 30 16C30 23.732 23.732 30 16 30C8.268 30 2 23.732 2 16C2 8.268 8.268 2 16 2Z"
+        stroke="#2F2F2F"
+        stroke-width="2"
+        fill="#FAFAFA"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Left eye -->
+  <circle cx="11" cy="12" r="1.5" fill="#2F2F2F"/>
+
+  <!-- Right eye -->
+  <circle cx="21" cy="12" r="1.5" fill="#2F2F2F"/>
+
+  <!-- Hand-drawn smile -->
+  <path d="M10 19C10 19 12 23 16 23C20 23 22 19 22 19"
+        stroke="#2F2F2F"
+        stroke-width="2"
+        stroke-linecap="round"
+        fill="none"/>
+</svg>

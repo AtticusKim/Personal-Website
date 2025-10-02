@@ -53,6 +53,9 @@ export default function HeroSection() {
             <h2 className="font-geist text-[clamp(1.5rem,3vw,2.25rem)] font-medium text-[#1a1a1a] mb-4 tracking-tight">
               [currently innovating]
             </h2>
+            <p className="font-geist text-[clamp(1rem,1.5vw,1.125rem)] text-[#666666] max-w-2xl font-normal leading-relaxed">
+              Blending experiences across countries and industries to craft products and stories that move people forward.
+            </p>
           </div>
 
           <motion.p
@@ -61,9 +64,7 @@ export default function HeroSection() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="font-geist text-[clamp(1.125rem,2vw,1.375rem)] text-[#666666] max-w-2xl font-normal leading-relaxed"
           >
-            Inspired by moving stories, meaningful relationships, and gratitude.
-
-            Look through my work, who I am, and what I value!
+          
           </motion.p>
         </motion.div>
       </div>

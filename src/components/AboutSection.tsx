@@ -63,13 +63,19 @@ export default function AboutSection() {
 
         <div className="text-[clamp(1.125rem,2vw,1.375rem)] text-[#5c6470] max-w-3xl font-normal leading-[1.7]" style={{ marginBottom: '30px' }}>
           <p>
-            I grew up in Orange County and am currently attending USC studying business and AI. I grew up selling backpacks on Amazon with my parents when we immigrated here, and that's when my love for entrepreneurship and solving problems grew.
+            I grew up in Orange County and am currently attending USC studying business and AI. My entrepreneurial journey started early, selling backpacks on Amazon with my parents after we immigrated here. That small business taught me to spot problems, build solutions, and stay scrappy. It's where my love for creating and solving real challenges took root.
           </p>
 
           <br />
 
           <p>
-            Ever since, I have been building random projects, trying to learn as much as possible, and exploring the world outside of the bubble I grew up in. I have had the opportunity to travel Thailand by myself, study abroad in Madrid and travel to 10+ European countries, and explore random states with my friends. All while learning to build and meet new people.
+            Since then, I've been blending experiences across countries and industries to shape how I build. From traveling solo through Thailand, to studying abroad in Madrid and exploring 10+ European countries, to working across finance, tech, and startups in the U.S. and Southeast Asia. Each experience has made me more adaptable, more curious, and more committed to building products that move people forward.
+          </p>
+
+          <br />
+
+          <p>
+            Through it all, I've learned that the best products come from genuinely understanding people. My biggest goal is to augment growing tech economies in developing countries, creating movements and products that unlock access to resources in emerging markets, starting with my home in the Philippines. Product management is my training ground to learn every facet of building something meaningful, from engineering to design to business.
           </p>
 
           <br />
