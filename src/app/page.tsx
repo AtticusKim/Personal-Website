@@ -11,7 +11,7 @@ export default function Home() {
       <Header />
       <main className="flex flex-col flex-1">
         <HeroSection />
-        <div id="work" className="section-spacing">
+        <div id="work" className="section-spacing" style={{ scrollMarginTop: '25vh', paddingBottom: '50vh' }}>
           <Gallery />
         </div>
       </main>

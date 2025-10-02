@@ -33,8 +33,15 @@ export default function HeroSection() {
     return () => clearTimeout(timeout)
   }, [displayText, isDeleting, currentIndex, names])
 
+  const scrollToWork = () => {
+    const workSection = document.getElementById('work')
+    if (workSection) {
+      workSection.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
+
   return (
-    <section className="min-h-screen flex flex-col justify-center relative pt-48">
+    <section className="min-h-screen flex flex-col relative pt-48">
       <div className="container w-full relative z-10 flex-1 flex flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -55,14 +62,19 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-geist text-[clamp(1.125rem,2vw,1.375rem)] text-[#666666] max-w-2xl font-normal leading-relaxed"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="mt-12"
           >
-          
-          </motion.p>
+            <button
+              onClick={scrollToWork}
+              className="font-geist text-base font-medium text-[#1a1a1a] bg-[#CD7F32]/10 hover:bg-[#CD7F32]/20 px-8 py-4 rounded-full transition-all duration-200"
+            >
+              Explore my Work ↓
+            </button>
+          </motion.div>
         </motion.div>
       </div>
     </section>
