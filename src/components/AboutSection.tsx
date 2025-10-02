@@ -2,10 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-type Props = {
-  className?: string
-}
-
 const galleryImages = [
   '100_2481.JPG',
   'GOPR7112 3.JPG',
@@ -63,19 +59,19 @@ export default function AboutSection() {
 
         <div className="text-[clamp(1.125rem,2vw,1.375rem)] text-[#5c6470] max-w-3xl font-normal leading-[1.7]" style={{ marginBottom: '30px' }}>
           <p>
-            I grew up in Orange County and am currently attending USC studying business and AI. My entrepreneurial journey started early, selling backpacks on Amazon with my parents after we immigrated here. That small business taught me to spot problems, build solutions, and stay scrappy. It's where my love for creating and solving real challenges took root.
+            I grew up in Orange County and am currently attending USC studying business and AI. My entrepreneurial journey started early, selling backpacks on Amazon with my parents after we immigrated here. That small business taught me to spot problems, build solutions, and stay scrappy. It&apos;s where my love for creating and solving real challenges took root.
           </p>
 
           <br />
 
           <p>
-            Since then, I've been blending experiences across countries and industries to shape how I build. From traveling solo through Thailand, to studying abroad in Madrid and exploring 10+ European countries, to working across finance, tech, and startups in the U.S. and Southeast Asia. Each experience has made me more adaptable, more curious, and more committed to building products that move people forward.
+            Since then, I&apos;ve been blending experiences across countries and industries to shape how I build. From traveling solo through Thailand, to studying abroad in Madrid and exploring 10+ European countries, to working across finance, tech, and startups in the U.S. and Southeast Asia. Each experience has made me more adaptable, more curious, and more committed to building products that move people forward.
           </p>
 
           <br />
 
           <p>
-            Through traveling to different places, working across industries, and spending time with my family crafting products, I've learned that the best products come from genuinely understanding people. And you can only understand people better when you put yourself out there and explore various things. As a result, product management is my way of channeling these diverse experiences into building solutions that truly resonate with the people they're meant to serve.
+            Through traveling to different places, working across industries, and spending time with my family crafting products, I&apos;ve learned that the best products come from genuinely understanding people. And you can only understand people better when you put yourself out there and explore various things. As a result, product management is my way of channeling these diverse experiences into building solutions that truly resonate with the people they&apos;re meant to serve.
           </p>
 
           <br />

@@ -22,7 +22,7 @@ export default function FunPage() {
 
               <div className="space-y-6 text-[clamp(1.125rem,2vw,1.375rem)] text-[#5c6470] max-w-3xl font-normal leading-[1.7]" style={{ marginBottom: '20px' }}>
                 <p>
-                  When I'm not building, you'll find me either outside playing sports with my friends or exploring creative outlets through music. I love exploring life to the fullest and practicing gratitude.
+                  When I&apos;m not building, you&apos;ll find me either outside playing sports with my friends or exploring creative outlets through music. I love exploring life to the fullest and practicing gratitude.
                 </p>
               </div>
 
