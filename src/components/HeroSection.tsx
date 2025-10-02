@@ -1,68 +1,70 @@
 'use client'
-
-import { motion } from 'framer-motion'
+type Props = {
+  className?: string
+}
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 export default function HeroSection() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
+  const names = ['Atticus Kim', '김현준', 'atty']
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [displayText, setDisplayText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const currentName = names[currentIndex]
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (displayText.length < currentName.length) {
+          setDisplayText(currentName.slice(0, displayText.length + 1))
+        } else {
+          // Wait before deleting
+          setTimeout(() => setIsDeleting(true), 2000)
+        }
+      } else {
+        // Deleting
+        if (displayText.length > 0) {
+          setDisplayText(displayText.slice(0, -1))
+        } else {
+          setIsDeleting(false)
+          setCurrentIndex((currentIndex + 1) % names.length)
+        }
+      }
+    }, isDeleting ? 50 : 100)
+
+    return () => clearTimeout(timeout)
+  }, [displayText, isDeleting, currentIndex, names])
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 relative">
-      <div className="max-w-4xl mx-auto text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#111] mb-8 tracking-tight"
-        >
-          Atticus Kim
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-xl md:text-2xl text-[#666] max-w-2xl mx-auto leading-relaxed"
-        >
-          Developer & designer crafting thoughtful digital experiences
-        </motion.p>
-
+    <section className="min-h-screen flex flex-col justify-center relative pt-48">
+      <div className="container w-full relative z-10 flex-1 flex flex-col justify-center">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 flex gap-8 justify-center items-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <button
-            onClick={() => scrollToSection('experience')}
-            className="text-[#666] hover:text-[#111] transition-colors duration-300 text-lg font-medium"
+          <h1 className="text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.9] font-semibold text-[#1a1a1a] mb-6 tracking-tight" style={{ fontFamily: 'Lora, serif' }}>
+            {displayText}
+            <span className="animate-pulse">|</span>
+          </h1>
+
+          <div className="mb-8">
+            <h2 className="font-geist text-[clamp(1.5rem,3vw,2.25rem)] font-medium text-[#1a1a1a] mb-4 tracking-tight">
+              [currently innovating]
+            </h2>
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="font-geist text-[clamp(1.125rem,2vw,1.375rem)] text-[#666666] max-w-2xl font-normal leading-relaxed"
           >
-            Experience
-          </button>
-          <button
-            onClick={() => scrollToSection('projects')}
-            className="text-[#666] hover:text-[#111] transition-colors duration-300 text-lg font-medium"
-          >
-            Projects
-          </button>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#666] hover:text-[#111] transition-colors duration-300 text-lg font-medium"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#666] hover:text-[#111] transition-colors duration-300 text-lg font-medium"
-          >
-            GitHub
-          </a>
+            Inspired by moving stories, meaningful relationships, and gratitude.
+
+            Look through my work, who I am, and what I value!
+          </motion.p>
         </motion.div>
       </div>
     </section>
