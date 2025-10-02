@@ -93,7 +93,7 @@ export default function Gallery() {
         <div className="flex gap-16">
           {/* Left Side - Minimal List */}
           <div className={`${selectedId ? 'w-2/5' : 'w-full'} transition-all duration-500`}>
-            <div className="space-y-8">
+            <div className="space-y-6">
               {filteredWorks.map((item, index) => (
                 <motion.div
                   key={item.id}
@@ -103,6 +103,7 @@ export default function Gallery() {
                   transition={{ delay: index * 0.05, duration: 0.5 }}
                   onClick={() => handleItemClick(item.id)}
                   className="group cursor-pointer transition-all duration-300"
+                  style={{ marginBottom: '0.75rem' }}
                 >
                   <div className="grid grid-cols-[80px_1fr_1fr] gap-6 items-baseline">
                     <div className="font-mono text-sm text-[#999999] group-hover:text-white transition-colors duration-300">{item.year}</div>
