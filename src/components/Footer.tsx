@@ -1,7 +1,4 @@
 'use client'
-type Props = {
-  className?: string
-}
 
 import { motion } from 'framer-motion'
 

@@ -1,12 +1,9 @@
 'use client'
-type Props = {
-  className?: string
-}
-import { motion, AnimatePresence } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { useState, useEffect, useMemo } from 'react'
 
 export default function HeroSection() {
-  const names = ['Atticus Kim', '김현준', 'atty']
+  const names = useMemo(() => ['Atticus Kim', '김현준', 'atty'], [])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)

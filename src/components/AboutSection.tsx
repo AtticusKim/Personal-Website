@@ -75,7 +75,7 @@ export default function AboutSection() {
           <br />
 
           <p>
-            Through it all, I've learned that the best products come from genuinely understanding people. My biggest goal is to augment growing tech economies in developing countries, creating movements and products that unlock access to resources in emerging markets, starting with my home in the Philippines. Product management is my training ground to learn every facet of building something meaningful, from engineering to design to business.
+            Through traveling to different places, working across industries, and spending time with my family crafting products, I've learned that the best products come from genuinely understanding people. And you can only understand people better when you put yourself out there and explore various things. As a result, product management is my way of channeling these diverse experiences into building solutions that truly resonate with the people they're meant to serve.
           </p>
 
           <br />
